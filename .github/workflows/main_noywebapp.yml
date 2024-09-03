@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - NoyWebAPP
+name: Build and deploy ASP.Net Core app to Azure Web App - NoyWebApp
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_424F1040A4964C9EB6CC0DCCC3EA5D9D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A3CA9A80642D487A8AB196DB29C9ED5D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5A63D291E80547F1B21188EAE5C7FEC9 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6F031A4136AE44A784D0770A5F7E7893 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CA104BFD7A17420BB13D556462A2987C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_08ABA2CE5DAD4E65A22ED60531A69485 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'NoyWebAPP'
+          app-name: 'NoyWebApp'
           slot-name: 'Production'
           package: .
           
